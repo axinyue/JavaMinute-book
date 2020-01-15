@@ -28,6 +28,19 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>6.0.6</version>
 	</dependency>
+    <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>1.2.61</version>
+	</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+	<dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	    <version>1.13</version>
+	</dependency>
     
   </dependencies>
 </project>
