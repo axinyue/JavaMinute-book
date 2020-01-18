@@ -11,8 +11,8 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * mysql数据库学习
- * java.sql.*  以及  com.mysql.jdbc.Driver的使用
+ * mysql
+ * java.sql.*  
  * 
  * 
  * @author ax
@@ -45,22 +45,22 @@ public class TestConnect extends TestCase {
 			ResultSet rs = stmt.executeQuery(sql);
 			ResultSetMetaData metaData = rs.getMetaData();
 
-			// 获取有几个字段
+			// 鑾峰彇鏈夊嚑涓瓧娈�
 			int columnCount = metaData.getColumnCount();
 
-			//获取别名，sql中的as 字段，返回结果的列名. 示例： "select id as t_id from student limit 1,3"
+			//鑾峰彇鍒悕锛宻ql涓殑as 瀛楁锛岃繑鍥炵粨鏋滅殑鍒楀悕. 绀轰緥锛� "select id as t_id from student limit 1,3"
 			String columnLabel = metaData.getColumnLabel(columnCount);
 			print("getColumnLabel: "+columnLabel);
 			
-			//获取列名
+			//鑾峰彇鍒楀悕
 			String culumname = metaData.getColumnName(columnCount);
 			print("getColumnName: "+culumname);
 
-			//获取列的数据类型
+			//鑾峰彇鍒楃殑鏁版嵁绫诲瀷
 			String className = metaData.getColumnClassName(columnCount);
 			print("getColumnClassName: "+className);
 			
-			//获取字段所在列的所有值
+			//鑾峰彇瀛楁鎵�鍦ㄥ垪鐨勬墍鏈夊��
 			while (rs.next()) {
 				print(rs.getString(columnLabel));
 			}
